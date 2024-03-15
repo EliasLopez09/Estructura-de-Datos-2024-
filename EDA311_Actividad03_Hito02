@@ -1,0 +1,241 @@
+static int suma(int a, int b)
+{
+    int s = a + b;
+    return s;
+}
+//suma procedimiento
+void sumap (int a, int b)
+{
+    //utilizando procedimiento
+    int s;
+    s = a + b;
+    Console.WriteLine(s);
+}
+
+static void Main(string[] args)
+{
+    //utilizando funciones 
+    int x;
+    x=suma(1, 2);
+    Console.WriteLine(x);
+}
+******************
+static int suma(int a, int b)
+{
+    int s = a + b;
+    return s;
+}
+static int numMayor(int a, int b)
+{
+    if (a > b)
+    {
+        int mayor = a;
+        return mayor;
+    }else
+    {
+        int mayor = b;
+        return mayor;
+    }
+    
+
+**********************
+ static int suma(int a, int b)
+ {
+     int s = a + b;
+     return s;
+ }
+ static int numMayor(int a, int b)
+ {
+     if (a > b)
+     {
+         int mayor = a;
+         return mayor;
+     }
+     else
+     {
+         int mayor = b;
+         return mayor;
+     }
+
+
+ }
+ static double area(double sbase, double altura)
+ {
+     double a = (sbase * altura) / 2;
+     return a;
+
+ }
+
+ static void serieA(int n)
+ {
+     int a = 1;
+     for (int i = 1; i <= n; i++)
+     {
+         Console.Write(  a+ ", ");
+         a++;
+     }
+     Console.WriteLine();
+     Console.ReadKey();
+
+ }
+ static void serieB(int n)
+ {
+     int a = 2;
+     int b = n;
+     for (int i = 0; i < b; i++)
+     {
+         Console.Write(  a+ ", ");
+         a = a + 2;
+         
+     }
+     Console.WriteLine();
+     Console.ReadKey();
+ }
+ static void serieC(int n)
+ {
+     
+     int a = 15;
+     int b = n;
+     for (int i = 1; i <= b; i++)
+     {
+         Console.Write(a+ ", ");
+         a = a + 5;
+     }
+     Console.WriteLine();
+     Console.ReadKey();
+ }
+ static void serieD(int n)
+ {
+     int a = 1;
+     int b = n;
+     for (int i = 1; i <= b; i++)
+     {
+         Console.Write(a+ ", ");
+         a = a * 2;
+     }
+     Console.WriteLine();
+     Console.ReadKey();
+ }
+
+
+
+ static void Main(string[] args)
+ {
+     int valor;
+
+     Console.WriteLine("M E N U  D E  O P C I O N E S ");
+  
+     do
+     {
+         Console.WriteLine("1: SeriaA");
+         Console.WriteLine("2: SerieB");
+         Console.WriteLine("3: SerieC");
+         Console.WriteLine("4: SerieD");
+         Console.WriteLine("5: salir");
+         Console.WriteLine("Elija una opción ");
+          valor = Convert.ToInt32(Console.ReadLine());
+
+         
+         switch (valor)
+
+         {
+             case 1:
+                 Console.WriteLine("Introdusca 1 numero");
+                 int num1 = Convert.ToInt32(Console.ReadLine());
+
+                 serieA(num1);
+                 break;
+
+             case 2:
+                 Console.WriteLine("Introdusca 1 numero");
+                 int num2 = Convert.ToInt32(Console.ReadLine());
+                 serieB(num2);
+                 break;
+
+             case 3:
+                 Console.WriteLine("Introdusca 1 numero");
+                 int num3 = Convert.ToInt32(Console.ReadLine());
+                 serieC(num3);
+                 break;
+
+             case 4:
+
+                 Console.WriteLine("Introdusca 1 numero");
+                 int num4 = Convert.ToInt32(Console.ReadLine());
+                 serieD(num4);
+
+                 break;
+
+             case 5:
+                 Console.WriteLine("GRACIAS POR USAR NUESTRO SOFTWARE");
+                 break;
+
+         }
+     } while (valor != 0 );
+    
+     
+
+ }
+    
+}
+static double area(double sbase, double altura)
+{
+    double a = (sbase * altura) / 2;
+    return a;
+
+}
+
+static void Main(string[] args)
+{
+    //utilizando funciones 
+    int x;
+    x = numMayor(4, 5);
+    Console.WriteLine("M E N U D E ");
+    Console.WriteLine("1: Suma");
+    Console.WriteLine("2: Mayor");
+    Console.WriteLine("3: Area de un triangulo");
+    console.WriteLine("4: salir");
+    
+
+        Console.WriteLine("Elija una opción ");
+         int op= Int32.Parse(Console.ReadLine());
+    do
+    {           
+        switch (op)
+    
+        {
+            case 1:
+            Console.WriteLine("Introdusca 2 numeros");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            int z = suma(num1, num2);
+            Console.WriteLine("La suma es: "+z);
+            break;
+        
+            case 2:
+            Console.WriteLine("Introdusca 2 numeros");
+            int  num3 = Convert.ToInt32(Console.ReadLine());
+            int  num4 = Convert.ToInt32(Console.ReadLine());
+
+            int mayor = numMayor(num3, num4);
+            Console.WriteLine( "El numero mayor es: "+mayor);
+            break;
+            
+            case 3:
+            Console.WriteLine("Introdusca 2 numeros");
+            double num5 = Convert.ToDouble(Console.ReadLine());
+            double num6 = Convert.ToDouble(Console.ReadLine());
+            double triandulo = area(num5, num6);
+            Console.WriteLine("El area del triangulo es: "+triandulo);
+            break;
+
+            case 4:
+            
+            Console.WriteLine("GRACIAS POR USAR NUESTRO SOFTWARE");
+            break;
+
+        }
+
+     }while (op != 4) ;
+

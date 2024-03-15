@@ -1,0 +1,190 @@
+ejer1
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Timers;
+
+namespace EDD._23._02._24
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            /*String nombre, direccion;
+            nombre = "Elias";
+            
+            direccion = "El alto";
+            int edad= 20;
+            double estatura, peso;
+            estatura = 1.7;
+            peso = 80.5;
+            Boolean disponibildad;
+            disponibildad = false;
+            const int ci=1346896;
+            /*Console.WriteLine(nombre);
+            Console.WriteLine(direccion);
+            Console.WriteLine(edad);
+            Console.WriteLine(estatura);
+            Console.WriteLine(peso);
+            Console.WriteLine(disponibildad);
+            Console.WriteLine(ci);*/
+            /*Console.WriteLine("NOMBRE: "+nombre);
+            Console.WriteLine("DIRECCIÓN: " +direccion);
+            Console.WriteLine("EDAD: "+edad);
+            Console.WriteLine("ESTATURA: "+estatura);
+            Console.WriteLine("PESO: "+peso);
+            Console.WriteLine("DISPONIBILIDAD: "+disponibildad);
+            Console.WriteLine("CI: "+ci);*/
+            /*Console.WriteLine("NOMBRE: {0}",  nombre);
+            Console.WriteLine("DIRECCIÓN:  {0}", direccion);
+            Console.WriteLine("EDAD: {0}", edad);
+            Console.WriteLine("ESTATURA: {0}",  estatura);
+            Console.WriteLine("PESO: {0}", peso);
+            Console.WriteLine("DISPONIBILIDAD: {0}", disponibildad);
+            Console.WriteLine("CI: {0}", ci);
+            Console.ReadKey();*/
+        }
+    }
+}
+
+*************************
+eJERCICIO 2
+
+static void Main(string[] args)
+{
+    const int LADO = 10;
+    const double PI = 3.1416;
+
+    //hallar el area de un triangulo base por altura/2
+    Console.WriteLine( "PARA HALLAR EL AREA DE UN TRIANGULO" );
+    Console.WriteLine("INGRESE LA BASE: ");
+    double x = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine("INGRESE LA ALTURA: ");
+    double y = Convert.ToInt32(Console.ReadLine());
+
+    double result = (x * y) / 2;
+    Console.WriteLine("EL AREA DEL TRIANGULO ES: "+result);
+
+    //hallar el area de un rectangulo  lado * lado
+    Console.WriteLine("PARA HALLAR EL AREA DE UN CUADRADO");
+
+
+    int areaCuadrado = LADO * LADO;
+    Console.WriteLine("EL AREA DEL CUADRADO ES: " + areaCuadrado);
+
+    //hallar el area de un circulo pi*radio al cuadrado
+    Console.WriteLine("PARA HALLAR EL AREA DE UN CIRCULO");
+    Console.WriteLine("INGRESE EL RADIO DEL CIRCULO ");
+    double radio= Convert.ToInt32(Console.ReadLine());
+
+    double areaCirculo= PI*(radio * radio);
+    Console.WriteLine("EL AREA DEL CIRCULO  ES: " + areaCirculo);
+
+
+    Console.ReadKey();
+
+}
+*********************
+static void Main(string[] args)
+{
+    Console.WriteLine("INGRESE USUARIO: ");
+    string usuario = Convert.ToString(Console.ReadLine());
+    Console.WriteLine("INGRESE CONTRASEÑA: ");
+    string contrasena= Convert.ToString(Console.ReadLine());
+
+    Console.WriteLine("INGRESE NOMBRE DE USUARIO");
+    string verUsuario = Convert.ToString(Console.ReadLine());
+    if (verUsuario == usuario)
+    {
+        Console.WriteLine("INGRESE LA CONTRASEÑA ");
+        string verContrasena = Convert.ToString(Console.ReadLine());    
+        if (verContrasena == contrasena)
+        {
+            Console.WriteLine("BIENVENIDO :)");
+            Console.ReadKey();
+        }
+        else
+        {
+            Console.WriteLine("la contraseña es incorrecta");
+        }
+    }
+    else
+    {
+        Console.WriteLine("El usuario no es correcto");
+
+    }
+
+    
+
+
+}
+
+**************
+ejercicio 4
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("ingrese una palabra");
+        string palabra=Convert.ToString(Console.ReadLine());
+
+        int longitud=palabra.Length;
+        
+        int contador =0;
+        for (int i = 0; i < longitud; i++)
+        {
+            if(palabra[i] == 'a' || palabra[i]=='e' || palabra[i] == 'i' || palabra[i] == 'o' || palabra[i] == 'u')
+            {
+                contador++;
+            }
+            
+        }
+        Console.WriteLine("Todas la vocales ingresadas son: " + contador);
+        Console.ReadKey();
+    }
+}
+
+
+ string cod;
+ Console.WriteLine("ingrese Apellido Paterno: ");
+ string apellidoPaterno = Convert.ToString(Console.ReadLine());
+
+
+ Console.WriteLine("ingrese el Apellido MAterno");
+ string apellidoMaterno = Convert.ToString(Console.ReadLine());
+
+ Console.WriteLine("ingrese su Nombre");
+ string nombre = Convert.ToString(Console.ReadLine());
+
+ Console.WriteLine("ingrese su fecja de nacimento");
+ string fechaNac = Convert.ToString(Console.ReadLine());
+
+
+
+ Console.Write(apellidoPaterno[0]);
+ Console.Write(apellidoMaterno[0]);
+ Console.Write(nombre[0]); 
+ Console.Write(fechaNac.Substring(0,2));
+ Console.Write(fechaNac.Substring(3, 2));
+ Console.Write(fechaNac.Substring(8,2 ));
+
+
+*******
+ejr6
+internal class Program
+{
+    static void Main(string[] args)
+    {
+       
+
+        string cadena1 = "Estructura de datos";
+        string cadena2 = cadena1.Insert(14, "muchos ");
+        Console.WriteLine(cadena2 );
+
+        Console.ReadKey();
+    }
+}

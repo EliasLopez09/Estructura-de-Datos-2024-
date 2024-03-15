@@ -1,0 +1,37 @@
+package EvaluaciónDiagnostica;
+import java.util.Scanner;
+import com.sun.jdi.PathSearchingVirtualMachine;
+
+public class Ejr4 {
+    public static void main(String[] args) {
+
+        Scanner leer = new Scanner(System.in);
+        System.out.println("INGRESE EL TAMAÑO DEL VECTOR");
+        int tamaño= leer.nextInt();
+
+        //establecemos el tamaño del vector
+        int [] vector = new int[tamaño];
+
+        System.out.println("EL TAMAÑO DEL VECTOR SERA DE "+vector.length +" COLUMNAS");
+        int vueltas= vector.length;
+        int num=0;
+        for (int i =0;i < vector.length;i++){
+            // pedimos que ingrese los numero para el vector
+            System.out.println("INGRESE  "+vueltas-- + " VALORES");
+            num = leer.nextInt();
+            vector [i] = num;
+        }
+        int cont;
+        cont = vector.length;
+        System.out.println("EL VECTOR INGRESADO ES: ");
+        for (int cant = 0; cant < vector.length;cant++){
+            System.out.print(vector[cant]+",");
+        }
+        System.out.println();
+        System.out.println("EL VECTOR INVERSO ES: ");
+        while (cont <= vector.length && cont >0 ){
+            cont --;
+            System.out.print( vector[cont]+", ");
+        }
+    }
+}

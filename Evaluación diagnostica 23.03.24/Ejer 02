@@ -1,0 +1,48 @@
+package EvaluaciónDiagnostica;
+public class Ejr2_Vectores {
+    public static void main(String[] args) {
+
+
+        int [] vector1= {1,3,5,7};
+        int [] vector2= {2,4,6,8};
+        for (int i =0;i< vector1.length;i++){
+            System.out.print(vector1[i]+" ");
+        }
+        System.out.println();
+        for (int j =0;j< vector2.length;j++){
+            System.out.print(vector2[j]+" ");
+        }
+        int cant=0;
+        System.out.println();
+        //sumamos la cantidad de columnas que necesitaremos
+        cant=vector1.length+ vector2.length;
+        System.out.println("columnas total es: "+cant);
+
+        //creamos un vector de 8 columnaS
+        int[] resultado = new int[cant];
+        System.out.println("prueva "+ resultado.length);
+
+        int i = 0, j = 0, k = 0;
+        while (i < vector1.length && j < vector2.length)
+        {
+            if (vector1[i] < vector2[j]) {
+                resultado[k++] = vector1[i++];
+            } else {
+                resultado[k++] = vector2[j++];
+            }
+        }
+
+        while (i < vector1.length)
+        {
+            resultado[k++] = vector1[i++];
+        }
+
+        while (j < vector2.length) {
+            resultado[k++] = vector2[j++];
+        }
+        for (int cont=0;cont < resultado.length;cont++)
+        {
+            System.out.print(resultado[cont]+" ");
+        }
+    }
+}

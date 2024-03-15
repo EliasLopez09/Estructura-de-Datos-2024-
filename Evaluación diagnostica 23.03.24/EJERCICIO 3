@@ -1,0 +1,41 @@
+package EvaluaciónDiagnostica;
+import java.util.Scanner;
+public class Ejr3 {
+    public static void main(String[] args) {
+
+        Scanner leer = new Scanner(System.in);
+
+        System.out.println("INGRESE EL TAMAÑO DEL VECTOR");
+        int tamaño= leer.nextInt();
+
+        //establecemos el tamaño del vector
+        int [] vector = new int[tamaño];
+
+        System.out.println("EL TAMAÑO DEL VECTOR SERA DE "+vector.length +" COLUMNAS");
+        int vueltas= vector.length;
+        int num=0;
+        for (int i =0;i < vector.length;i++){
+            // pedimos que ingrese los numero para el vector
+            System.out.println("INGRESE  "+vueltas-- + " VALORES");
+            num = leer.nextInt();
+            vector [i] = num;
+        }
+
+        System.out.println("LOS VALORES INGRESADOS SON ");
+        for (int cont = 0; cont < vector.length; cont++){
+            System.out.print(vector[cont]+", ");
+        }
+        int numPar=0, num1 =0;
+        //sumaremos los numeros pares del vector
+        for (int cant = 0; cant < vector.length; cant++){
+
+            num1= vector[cant];
+            if ( num1 % 2 == 0 ){
+                numPar = num1+numPar;
+            }
+
+        }
+        System.out.println();
+        System.out.println("LOS NÚMEROS PARES SUMADOS SON "+numPar);
+    }
+}

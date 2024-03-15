@@ -1,0 +1,59 @@
+package EvaluaciónDiagnostica;
+
+import java.util.Scanner;
+import java.util.Scanner;
+public class Ejr1 {
+ /*Ejercicio 1
+   Convertir un número de decimal a binario
+   */
+
+    public static void main(String[] args)
+    {
+        Scanner leer = new Scanner(System.in);
+        System.out.println("ingrese un numero mayor o igual a 0: ");
+        int dividend = leer.nextInt();
+
+        System.out.println("el numeor ingresado es: "+dividend);
+
+        if (dividend == 0){
+            System.out.println("El numero binario es: ");
+            System.out.println(0);
+
+        }
+else {
+                int  divid=0,diviso=2, residu=0, cosient=0;
+                int cont=0;
+                divid = dividend;
+
+                while (divid >= diviso)
+                {
+                    cosient = divid/diviso;
+                    // el cociente vuelvo a dividir entre 2 asta que el dividendo sea menor al divisor
+                    residu = divid - (cosient * diviso);
+                    divid = cosient;
+                    cont++;
+                }// nos indica el numero de vueltas que dara
+
+               //4
+                System.out.println("El numero binario es: ");
+                System.out.print("1");
+                while(cont>0 )
+                {
+                    int dividendo, divisor=2, residuo=0, cosiente=0;
+                    dividendo = dividend;//12
+                    //System.out.println("el dividendo devera ser 12: "+dividend);
+                    for (int i=0;  i < cont;i++)
+                    {
+
+                        cosiente = dividendo/divisor;
+                        residuo = dividendo - (cosiente * divisor);
+                        dividendo = cosiente;
+                    // System.out.println("el dividendo es "+dividendo);
+                     }
+                    System.out.print(" "+residuo);
+
+                    cont--;
+                }
+        }
+    }
+}
